@@ -7,3 +7,5 @@ from .models import User
 class UserAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'email')
     list_filter = ('last_name', 'email')
+    search_fields = ('email', 'first_name', 'last_name')
+    ordering = ('email',)
